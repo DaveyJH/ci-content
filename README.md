@@ -1,4 +1,4 @@
-# DHorrocks Contennt Creation
+# DHorrocks Content Creation
 
 Draft content material written for Code Institute blog posts.
 

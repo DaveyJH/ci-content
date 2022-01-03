@@ -19,7 +19,7 @@ Honestly. There is no answer to this question. You may have a specific need for
 a certain functionality at first, or you may have decided you want to become as
 prolific with the programming language as you can manage. Either way, there are
 so many routes to the same result, this question is just un-answerable. In
-truth, I don't know there is a coder alive (or otherwise) who could claim to
+truth, I don't know if there is a coder alive (or otherwise) who could claim to
 have 'learned JavaScript'. The classic saying 'Every day is a school day'
 couldn't be more true than when exploring this language.
 

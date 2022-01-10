@@ -23,12 +23,12 @@ truth, I don't know if there is a coder alive (or otherwise) who could claim to
 have 'learned JavaScript'. The classic saying 'Every day is a school day'
 couldn't be more true than when exploring this language.
 
-The beauty of this language lies in this exact verity. A complete novice can
-start to learn at whatever speed they feel comfortable doing so. Likewise, a
-hardened scripting guru can further their knowledge at the same rate. The
-resources are almost limitless, the information is readily available and there
-are a thousand and one ways to do almost everything...and that is just the
-beginning!
+The beauty of this language lies in the infinite possibilities it contains. A
+complete novice can start to learn at whatever speed they feel comfortable doing
+so. Likewise, a hardened scripting guru can further their knowledge at the same
+rate. The resources are almost limitless, the information is readily available
+and there are a thousand and one ways to do almost everything...and that is just
+the beginning! The journey is never-ending.
 
 Conversely, it takes a matter of minutes to learn JavaScript. In fact, you can
 start right now. Open up your DevTools, locate the console, type
@@ -89,7 +89,7 @@ definitely a site to come back to often and challenge yourself as you progress.
 As mentioned above, for a beginner (or an experienced developer), this little
 function is, possibly, **the most important aid** in your toolkit. When working
 with JavaScript, you may struggle to visually see everything that is happening,
-but this tool can turn the mystical into the manipulatable.
+but logging can turn the mystical into the manipulatable.
 
 #### Strings Vs Variables
 
@@ -107,7 +107,7 @@ console.log(`The number = ${aNumber}`);
 
 ```
 
-When you run the file, view the built-in console and see the results.
+When you run the file, view the built-in console and see the logged results.
 
 - First, a string is printed exactly as you typed it between the "" marks.
   > myVariable

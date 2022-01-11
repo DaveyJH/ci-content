@@ -3,7 +3,7 @@
 ## Create Content
 
 - [x] intro
-- [ ] console log
+- [x] console log
 - [ ] live console
 - [ ] Identifying elements
 - [ ] JS is inline
@@ -35,13 +35,72 @@ would not always be as you would expect and I would have to use any and every
 tool available to me to find the reason for that. In short...I press buttons to
 find out what happens and I deal with the resulting carnage in a methodical way.
 
-What I am going to talk about is my approach to debugging JS with devtools. It
-is not the only way and it certainly isn't exhaustive so if you have other ideas
-and tools and tips, please share them in the channel. The only competitions
-during your time at CI are the hackathons (which you should all take part in) so
-if you find something that will help your fellow students I strongly urge you to
-share it.
+What I am going to talk about is my approach to debugging and developing JS with
+devtools. It is not the only way and it certainly isn't exhaustive so if you
+have other ideas and tools and tips, please share them in the channel. The only
+competitions during your time at CI are the hackathons (which you should all
+take part in) so if you find something that will help your fellow students, I
+strongly urge you to share it.
 
+### Console Log
+
+#### What is the console and what is logging?
+
+##### The console
+
+- The console is a command line interface in your browser that can help
+  visualise JavaScript.
+- If you are using chrome; firefox; or edge on windows, you can open devtools
+  using `ctrl` `shift` and `i`. If for any reason that isn't working, google
+  'open devtools {browser/OS}'.
+- Once devtools is open, find your console tab. This really depends on your
+  settings, screen layout etc so if you cant find it, either google it or drop a
+  message in the channel with a screenshot.
+- With your console open, you have a live interface to work with JS and your
+  html document.
+- For those that don't know, you can pop your DevTools out into a separate
+  window allowing a wider array of screen size testing
+
+##### Logging
+
+- Logging allows you to create a log of various things. It will be displayed in
+  the console.
+- The console, which is also a JavaScript object, has a method called log().
+  This allows you to log out string and variables, or a combination of both.
+- This can be done from the browser console, or written directly into your code.
+- There are additional methods called `error` and `warn` that allow a different
+  style of message to be displayed.
+- If you want to get really fancy, you can add CSS to the log messages, but you
+  will have to research that yourself.
+
+#### The console is live
+
+- As I just mentioned, the console allows you to interact with your document as
+  it is presented. This means you can log variables, elements, even entire
+  functions, while your document is visible.
+- One important use for this is checking the current state or value of a defined
+  variable from your script. The last few snippets showed how to print a custom
+  string but if we don't add the quotation marks, we will be printing a
+  variable. Here we have a variable called `currentScore` and its current value is a `Number` of two.
+- This is incredibly useful for those moments when what you think should be
+  happening just isn't. Remember, a computer follows an absolute set of rules,
+  so as much as you might not like it, the error is yours. If you notice
+  something isn't quite right as you are running through your application, log
+  out any variables that may be relevant. With a good naming convention, you
+  should know the variable names without needing to look them up. The
+  console will help you out a little bit here, as you start to type it will
+  provide you with suggestions of accessible variables (and functions).
+- You can manipulate those variables here too, you can also call your (or even
+  define) functions. Anything you can write in your JS file, you can do here.
+- Calling a function can be a really useful tool. For my own PP2 I had a
+  condition that happened if the user reached 99 guesses and I really didn't
+  want to play through my game for that long. Instead, I wrote a test function
+  in my JS file and called it to test the condition from the console as it still
+  required some essential user input. It modified the variables as necessary to
+  simulate the situation that a user had manually input 99 guesses.
+- Remember, calling a function is done using parenthesis after its name. If you
+  omit them, you will log the actual script of the function.
+  
 ## Test/Review Content
 
 - [ ] intro

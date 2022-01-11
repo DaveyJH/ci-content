@@ -5,10 +5,37 @@ body {
   border: solid 2px #e84610;
 }
 
-h1 {
+h1,
+h2 {
   text-align: center;
   color: #e84610;
   font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.7rem;
+  margin-top: -2rem;
+}
+
+#click-me {
+  cursor: pointer;
+  font-size: 3rem;
+  display: block;
+  margin: 5rem auto 0;
+  width: 30rem;
+  height: 4rem;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+}
+
+#click-me:hover {
+  background-color: #e84610;
+}
+
+#click-me:active {
+  background-color: #333;
+  color: #858585;
 }
 
 main {

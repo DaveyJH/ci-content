@@ -6,9 +6,10 @@
 - [x] console log
 - [x] live console
 - [x] Identifying elements
-- [ ] JS is inline
-- [ ] Example of repeated listeners using event listener tab
+- [x] JS is inline
+- [x] Example of repeated listeners using event listener tab
 - [ ] console errors
+- [ ] debug break points
 - [ ] coverage
 - [ ] question time and summary
 
@@ -46,7 +47,7 @@ strongly urge you to share it.
 
 #### What is the console and what is logging?
 
-##### The console
+#### The console
 
 - The console is a command line interface in your browser that can help
   visualise JavaScript.
@@ -61,7 +62,7 @@ strongly urge you to share it.
 - For those that don't know, you can pop your DevTools out into a separate
   window allowing a wider array of screen size testing
 
-##### Logging
+#### Logging
 
 - Logging allows you to create a log of various things. It will be displayed in
   the console.
@@ -133,6 +134,123 @@ strongly urge you to share it.
 - `boxes[2].style.backgroundColor = "#f00";`
   - We can change modify attributes here, just as we could modify variables, and
     the effect will be shown immediately.
+
+### JS is inline
+
+- It is worth noting at this point that all JS styles are applied inline so they
+  have the highest specificity possible.
+- This means, assuming you are writing your CSS in external stylesheets, that
+  you should easily be able to identify style properties applied by your JS.
+
+### Repeated Event Listeners
+
+- Sometimes we have all of our functionality seemingly working as it should and
+  then out of the blue, a load of extra weird stuff happens. Let's take a look
+  into one of the common reasons as to why this might happen.
+- Best practice will have you adding events to elements via event listeners.
+  Great. You have a button, or a CTA, that allows your user to interact. But why
+  is everything behaving so strangely.
+- Let's head over to another live site with some real basic functionality.
+
+*[looking at listeners](https://daveyjh.github.io/ci-content/devtools-listeners.html)*
+
+- We are going to explore another tab in DevTools here, the Event Listeners tab.
+  - We don't need to know everything that is going on in this tab, we are just
+  using it to find the things we need, so don't get intimidated because you
+  don't know what everything does. I don't either!
+- I have written a couple of scripts for this page. The intention is to allow a
+  user to click on a numbered div and have the div change between white and
+  rebecca purple. This should only happen after the user has clicked the 'click
+  me' button.
+  - Great, it works as intended. No problems, right? Well let's see what happens
+    if the user clicks the 'click me' button again before clicking a div. Oh
+    dear, that isn't what we expected at all! Maybe if we click the button once
+    more...no, it's definitely not right now!
+  - This could lead to user frustration...Now the function is way off!
+- So let's take a look at why this is happening. Well, I know (because I wrote
+  it) that the 'click me' button function loops through each div and adds an
+  event listener to it that carries out the intended function (like we saw at
+  the start).
+  - `console.log(addEvent);`
+  - We can log out that function (without using parenthesis) to show what
+    happens when we click the button.
+  - We can then hover over it to view it in a tool tip or we can click it to go
+    directly to it in the source file.
+  - Either way, we see the functionality I just described.
+- So what went wrong?
+- Well, let's think through this logically. When we refresh the page, the div
+  has no function. We click the button once, the div functions are all normal.
+  We click again and the number increases by 2, the colour doesn't appear to
+  change. We already said that the button adds this functionality to the div, so
+  if we click it twice...we are adding the function twice. We can prove this
+  with the event listeners tab.
+- This is due to the way in which I have added the functionality to the divs.
+  you may notice that the functions on the divs don't have names, that's because
+  they are arrow functions. These are generally very helpful, but do need to be
+  used with some caution. Same applies for anonymous functions.
+- So let's try the second option I wrote. We can add the events globally.  
+  - `devtools-listeners-global.html`
+- If we click the button then the div, it all appears to work. Then we click the
+  button again and it stays working. Great! Not quite. Let's refresh and click a
+  div first. The function of the div is working straight away because we haven't
+  set any logic in the code to prevent this.
+  - There are ways to make this work, using an extra variable that is modified
+    from the button and check when clicking the div but I haven't written that
+    out as I feel it adds a layer of complexity to the code that makes it less
+    readable.
+  - I was lazy on this script file and didn't even bother writing a function to
+    the button, I knew the div functions would be available before clicking the
+    button and that's all I wanted to demonstrate here.
+- So for this situation, adding the event listener globally isn't going to work.
+  This would be the case if you are creating new elements in the DOM or only
+  want certain functions to be added after a trigger event.
+  - Remember how JavaScript is read, when the script loads it will initiate
+    anything in the global space, from top to bottom.
+    - If you add an element after it is supposed to have its event listener, it
+      isn't going to re-read the script to add it.
+- Option 3, adding a class and checking for that class.
+  - `devtools-listeners-class.html`
+  - So, once again, here we are on our site. This script is very similar to our
+    first site's script. I have re-written the initial button function as an
+    arrow function for my personal preference.
+  - The key difference between these two scripts is the addition of an if
+    statement.
+  - The statement checks the box for the class 'event-added', if it doesn't
+    exist the first thing it does is add the class. It then continues to add the
+    event listener.
+  - This means that no matter how many times we click the initial button, the
+    event listener is added just once. We can note the changes in the element
+    panel, before clicking there are no classes applied, other than 'box' which
+    is used for styling.
+  - We can also check the divs are doing nothing when clicked, and can see they
+    have no event listeners applied in the event listeners tab. Once we click
+    the initial button the class is applied to the divs, the listeners are
+    added, and they have the intended function.
+  - If our user deviates from the expected input and clicks the 'click me'
+    button again, nothing extra happens. The script runs to the if statement,
+    the condition is not met, so the entire code block is passed.
+  - The listener still exists on the divs from our initial click, so we have the
+    desired function no matter what the user does.
+- There is one further way we can get this same functionality and for many of
+  you, it is the method you would know the most about. We can name our div
+  function.
+  - `devtools-listeners-named.html`
+  - This final script has a named function for the div functionality. There are
+    no classes, the only function applied in the global space is the 'click me'
+    button which is how it has been for all of these cases (apart from the one I
+    didn't bother with).
+  - It is the nature of JavaScript that prevents the unusual behaviour here. An
+    element cannot have an event listener applied multiple times with the same
+    trigger and name.
+  - We can see that no classes have been used, no duplicate event listeners are
+    created, and the functionality is as intended.
+- Take note that the event listener tab doesn't auto update, so if you
+  are checking these types of issues, be sure to select a different element
+  quickly and then return to the element you are testing.
+- As I said, there are many more functions to the event listener tab that I
+  don't know anything about. If you have any insight, drop it in the chat and I
+  can add a supplementary comment about it in Slack for those who won't get to
+  see the chat.
 
 ## Test/Review Content
 

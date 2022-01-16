@@ -8,6 +8,15 @@
   color: #fafafa;
 }
 
+button {
+  cursor: pointer;
+}
+
+button:hover:not(.incorrect, .correct) {
+  background-color: #444444;
+  color: #fafafa;
+}
+
 .answer {
   font-variant: small-caps;
 }

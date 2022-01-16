@@ -251,6 +251,29 @@ strongly urge you to share it.
   don't know anything about. If you have any insight, drop it in the chat and I
   can add a supplementary comment about it in Slack for those who won't get to
   see the chat.
+- One final comment on this, the issue may not be immediately obvious and the
+  bug may seem to happen at a random time. It is possible that your created
+  event listener causes a series of other functions to run. It is not until
+  these have ended that the next event listener instance will trigger. This can
+  happen with general functions too, so really try and think about the pattern
+  of behaviour that is causing the bug.
+
+### Console Errors
+
+- Earlier on we took a look into the console and hopefully you all learnt a
+  thing or two. Don't worry if you can't remember it all, for this section you
+  just have to know where it is. Plus, the webinar is being recorded, so you
+  can always come back for a refresher.
+- So, as the title of the slide suggest, we are going to look into console
+  errors. I'm going to focus on how to use them to your advantage. We aren't
+  discussing custom written errors here, these are unexpected errors.
+- First, once again, we need to head over to a website. This one is going to be
+  a lot easier to work with while using my IDE as I might make some changes that
+  I want to remain in place after refreshing the page. So welcome to the carnage
+  that is my VSCode (for those using GitPod, it's almost identical!).
+- I am using Preview on Web Server by Yuichi Nukiyama, there are loads of live
+  preview extensions, this is just the one I have.
+- So here we can see a simple quiz application.
 
 ## Test/Review Content
 

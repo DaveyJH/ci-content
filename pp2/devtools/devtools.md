@@ -158,6 +158,11 @@ strongly urge you to share it.
   - We don't need to know everything that is going on in this tab, we are just
   using it to find the things we need, so don't get intimidated because you
   don't know what everything does. I don't either!
+  - Be aware that there a number of drop-downs here. Listeners will appear under
+    their relevant typing.
+  - We are also going to run through a common issue I have seen people
+    struggling with. It may not happen now, but when it does, I think you will
+    be thankful you have been made aware of it.
 - I have written a couple of scripts for this page. The intention is to allow a
   user to click on a numbered div and have the div change between white and
   rebecca purple. This should only happen after the user has clicked the 'click

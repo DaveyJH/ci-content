@@ -1,0 +1,50 @@
+const questions = [{
+  "question": "What is 1 + 1",
+  "answers": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "correctAnswer": "2"
+},
+{
+  "question": "What is the 13th letter of the alphabet",
+  "answers": [
+    "K",
+    "L",
+    "M",
+    "N"
+  ],
+  "correctAnswer": "M"
+},
+{
+  "question": "What colour is made when mixing red and yellow",
+  "answers": [
+    "Green",
+    "Brown",
+    "Pink",
+    "Orange"
+  ],
+  "correctAnswer": "Orange"
+},
+{
+  "question": "What is the planet third closest to the sun",
+  "answers": [
+    "Earth",
+    "Mercury",
+    "Venus",
+    "Mars"
+  ],
+  "correctAnswer": "Earth"
+},
+{
+  "question": "How many hearts does a quid have",
+  "answers": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "correctAnswer": "3"
+}]

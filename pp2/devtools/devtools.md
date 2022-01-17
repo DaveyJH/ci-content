@@ -8,8 +8,8 @@
 - [x] Identifying elements
 - [x] JS is inline
 - [x] Example of repeated listeners using event listener tab
-- [ ] console errors
-- [ ] debug break points
+- [x] console errors
+- [x] debug break points
 - [ ] coverage
 - [ ] question time and summary
 
@@ -270,15 +270,55 @@ strongly urge you to share it.
   just have to know where it is. Plus, the webinar is being recorded, so you
   can always come back for a refresher.
 - So, as the title of the slide suggest, we are going to look into console
-  errors. I'm going to focus on how to use them to your advantage. We aren't
-  discussing custom written errors here, these are unexpected errors.
+  errors. I'm going to focus on how to use them to your advantage.
 - First, once again, we need to head over to a website. This one is going to be
-  a lot easier to work with while using my IDE as I might make some changes that
-  I want to remain in place after refreshing the page. So welcome to the carnage
-  that is my VSCode (for those using GitPod, it's almost identical!).
+  a lot easier to work with while using my IDE as I am going make some changes
+  that I want to remain in place after refreshing the page. So welcome to the
+  carnage that is my VSCode (for those using GitPod, it's almost identical!).
 - I am using Preview on Web Server by Yuichi Nukiyama, there are loads of live
   preview extensions, this is just the one I have.
-- So here we can see a simple quiz application.
+- So here we can see a simple quiz application. We have four buttons, a question
+  area and a couple of notes regarding the styles.
+- It doesn't work. Don't worry, we are going to fix it.
+- Let's work through the errors. Not so much the cause of the errors, but where
+  they are happening. This script is probably a little bit confusing for a lot
+  of you in the webinar, don't worry about understanding anything that is going
+  on here, we just want to find out where the code is going wrong.
+
+*[Error notes](error-notes.md)*
+
+### DevTools and Debugging
+
+- During the course you get introduced to the python tutor site. It's really
+  handy for getting to grips with what is happening and when. It offers great
+  visual representation of the stages and scope of JavaScript.
+- It does not, however, work with DOM manipulation. That's where DevTools has
+  yet another excellent feature to help you figure out what is going on.
+- Once again, we are heading to a live site to see how we can visualize our
+  mystical JavaScript just a little bit easier.
+
+*[DevTools and debugging](https://daveyjh.github.io/ci-content/devtools-debug.html)*
+
+- First, we need to load up the sources tab here. Locate the script you want to
+  debug and you can see the file, as you have written it, ready for debugging.
+- With the script in front of you, click on the line numbers where you want to
+  add 'breakpoints'. When the script gets to these lines, it will stop. Don't
+  worry if you need to debug something when the page loads - the breakpoints are
+  maintained when you refresh.
+- If you don't know where to add the breakpoints, I would suggest you weren't
+  paying very much attention to the last section. Trace your errors back through
+  the logic and add breakpoints in wherever you need to.
+- If no errors are being thrown you may need to have a think about where to add
+  the debug breakpoints - if you aren't sure, add a lot of them!
+- With these in place, we can now run our script and view what is happening. The
+  debugger will show us the current value of variables, without having to log
+  them, and will allow us to keep track of what is happening and when.
+- In the example given, we can follow our `num` variable through the entire
+  code. We see that we have an issue with not assigning the return value to
+  anything and, later on, we have an issue with scope.
+- This tool won't tell you how to fix your code, but if you are getting
+  unexpected results without error messages being displayed, this is an
+  incredibly useful tool to get familiar with.
 
 ## Test/Review Content
 

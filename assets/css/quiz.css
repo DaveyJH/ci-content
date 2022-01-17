@@ -54,3 +54,10 @@ button:hover:not(.incorrect, .correct) {
 .box p {
   margin: 0;
 }
+
+.short {
+  display: block;
+  width: 20rem;
+  height: 7rem;
+  margin: 0 auto;
+}

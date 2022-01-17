@@ -88,3 +88,11 @@ code {
 .blue-magenta {
   color: #8080ff;
 }
+
+ol {
+  margin-left: 2rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}

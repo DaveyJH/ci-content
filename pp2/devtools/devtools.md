@@ -10,8 +10,8 @@
 - [x] Example of repeated listeners using event listener tab
 - [x] console errors
 - [x] debug break points
-- [ ] coverage
-- [ ] question time and summary
+- [x] coverage
+- [x] question time and summary
 
 ### Intro
 
@@ -320,6 +320,51 @@ strongly urge you to share it.
   unexpected results without error messages being displayed, this is an
   incredibly useful tool to get familiar with.
 
+### Coverage
+
+- OK, last section now. This is a great thing to include in your testing
+  sections on your README.
+- It's also a great tool for reducing unnecessary code and I actually find it
+  helps me test all possible situations. I'm sure I am not alone when I say that
+  you can design something and then ask someone else to test it, the first thing
+  they do is something you just hadn't considered would ever be done.
+- Coverage is enabled through the command palette of DevTools using Ctrl, Shift
+  and P.
+- If you open the tab, your browser will ask you to refresh the page so it can
+  'record' all activity. This actually tests your CSS too so you might find you
+  can trim that down a bit too.
+- It shows a bar that starts at 100%. As your code is used, it fills in. It is
+  up to you to interact with your site to try and get that bar to 100%.
+- If you are struggling to find those last few lines, click the file in the
+  coverage window and it will pop up in the sources tab with highlighted lines.
+  Any lines with red next to their number are yet to be tested. Hopefully, you
+  know your code well enough that you can see what interactions you need to do
+  to force the code to read these lines.
+- Ideally, you want to get that JavaScript bar to 0 'Unused Bytes'. That means
+  all of your script is doing something and it is a great screen shot to add to
+  your README.
+- Don't forget, you can use coverage, the debugger and your live console all at
+  the same time.
+
+### Question Time
+
+Thanks everybody for attending, I really hope this has been helpful. All the
+live sites and source code are available in a ci-content repo on my profile.
+Feel free to resort back to it any time you need to.
+
+This has been a lot to take it, but hopefully it really helps you to understand
+your JavaScript better and makes you just a little more confident with your
+approach. Remember, code can't be broken so badly it can't be fixed...so get out
+there and break it!
+
+I am happy to answer any questions relating to the topics I have covered. If you
+have other queries relating to JavaScript I can try and help with those too. If
+you all stay quiet I know that I have either done a great job, you are all
+exhausted, or you are concerned that you are the only one with questions...well
+one the last note, you aren't! If you don't have questions about JavaScript you
+aren't pushing yourself hard enough with it. So please, I have un-muted
+everybody, let me hear your thoughts.
+
 ## Test/Review Content
 
 - [ ] intro
@@ -331,5 +376,3 @@ strongly urge you to share it.
 - [ ] JS is inline
 - [ ] console errors
 - [ ] question time and summary
-
-### Intro

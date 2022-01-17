@@ -1,19 +1,6 @@
 # Decipher With DevTools
 
-## Create Content
-
-- [x] intro
-- [x] console log
-- [x] live console
-- [x] Identifying elements
-- [x] JS is inline
-- [x] Example of repeated listeners using event listener tab
-- [x] console errors
-- [x] debug break points
-- [x] coverage
-- [x] question time and summary
-
-### Intro
+## Intro
 
 Hi everyone, welcome to my webinar on deciphering with devtools.
 
@@ -43,11 +30,11 @@ competitions during your time at CI are the hackathons (which you should all
 take part in) so if you find something that will help your fellow students, I
 strongly urge you to share it.
 
-### Console Log
+## Console Log
 
-#### What is the console and what is logging?
+### What is the console and what is logging?
 
-#### The console
+### The console
 
 - The console is a command line interface in your browser that can help
   visualise JavaScript.
@@ -62,7 +49,7 @@ strongly urge you to share it.
 - For those that don't know, you can pop your DevTools out into a separate
   window allowing a wider array of screen size testing
 
-#### Logging
+### Logging
 
 - Logging allows you to create a log of various things. It will be displayed in
   the console.
@@ -74,7 +61,7 @@ strongly urge you to share it.
 - If you want to get really fancy, you can add CSS to the log messages, but you
   will have to research that yourself.
 
-### The console is live
+## The console is live
 
 - As I just mentioned, the console allows you to interact with your document as
   it is presented. This means you can log variables, elements, even entire
@@ -102,7 +89,7 @@ strongly urge you to share it.
 - Remember, calling a function is done using parenthesis after its name. If you
   omit them, you will log the actual script of the function.
 
-### Logging Elements
+## Logging Elements
 
 - So far we have done plenty of stuff that could also be done within our JS
   file. It might be a little easier to do it instantly sometimes, rather than
@@ -135,14 +122,14 @@ strongly urge you to share it.
   - We can change modify attributes here, just as we could modify variables, and
     the effect will be shown immediately.
 
-### JS is inline
+## JS is inline
 
 - It is worth noting at this point that all JS styles are applied inline so they
   have the highest specificity possible.
 - This means, assuming you are writing your CSS in external stylesheets, that
   you should easily be able to identify style properties applied by your JS.
 
-### Repeated Event Listeners
+## Repeated Event Listeners
 
 - Sometimes we have all of our functionality seemingly working as it should and
   then out of the blue, a load of extra weird stuff happens. Let's take a look
@@ -263,7 +250,7 @@ strongly urge you to share it.
   happen with general functions too, so really try and think about the pattern
   of behaviour that is causing the bug.
 
-### Console Errors
+## Console Errors
 
 - Earlier on we took a look into the console and hopefully you all learnt a
   thing or two. Don't worry if you can't remember it all, for this section you
@@ -287,7 +274,7 @@ strongly urge you to share it.
 
 *[Error notes](error-notes.md)*
 
-### DevTools and Debugging
+## DevTools and Debugging
 
 - During the course you get introduced to the python tutor site. It's really
   handy for getting to grips with what is happening and when. It offers great
@@ -320,7 +307,7 @@ strongly urge you to share it.
   unexpected results without error messages being displayed, this is an
   incredibly useful tool to get familiar with.
 
-### Coverage
+## Coverage
 
 - OK, last section now. This is a great thing to include in your testing
   sections on your README.
@@ -346,7 +333,7 @@ strongly urge you to share it.
 - Don't forget, you can use coverage, the debugger and your live console all at
   the same time.
 
-### Question Time
+## Question Time
 
 Thanks everybody for attending, I really hope this has been helpful. All the
 live sites and source code are available in a ci-content repo on my profile.

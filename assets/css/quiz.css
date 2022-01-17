@@ -23,6 +23,7 @@ button:hover:not(.incorrect, .correct) {
 
 .side-by-side {
   display: flex;
+  flex-direction: row-reverse;
   width: 100%;
 }
 

@@ -39,7 +39,7 @@ const questions = [{
   "correctAnswer": "Earth"
 },
 {
-  "question": "How many hearts does a quid have",
+  "question": "How many hearts does a squid have",
   "answers": [
     "1",
     "2",

@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < this.question.answers.length; i++) {
           answerParas[i].textContent = this.question.answers[i];
           answerParas[i].dataset.answer = this.question.answers[i];
-          }
+        }
         this.acceptingAnswer = true;
       };
       /**
@@ -104,12 +104,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   (async () => {
-    const quiz = new Quiz(await fetch("assets/js/quiz-questions.json")
-      .then (response => response.json())
-    );
-    for (let button of answerButtons) {
-      button.addEventListener("click", quiz.userInput);
+    try {
+      const quiz = new Quiz(await fetch("assets/js/quiz-questions.json")
+        .then (response => response.json())
+      );
+      for (let button of answerButtons) {
+        button.addEventListener("click", quiz.userInput);
+      }
+      quiz.runQuestion();
+    } catch (e) {
+      console.error(e);
+      questionPara.textContent = `(>▂<) Something went wrong!\
+ No quiz today I'm afraid`;
+      questionPara.nextElementSibling.textContent = ("...");
     }
-    quiz.runQuestion();
   })();
 });

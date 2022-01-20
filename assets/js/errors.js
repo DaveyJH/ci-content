@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.acceptingAnswer = false;
       /**
        * Inserts text into DOM
-       * @param {boolean} acceptingAnswer - Sets to true
+       * - Sets `acceptingAnswers` to true
        */
       this.insertText = () => {
         questionPara.textContent = this.question.question;
@@ -110,6 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
   (async () => {
     const quiz = new Quiz(await fetch("assets/js/error-questions.json")
       .then (response => response.json())
+      /* Catch error will allow quicker location of error
+      when using external file */
       // .catch(e => console.error(e))
     );
     for (let button of answerButtons) {

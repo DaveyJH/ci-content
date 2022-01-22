@@ -304,7 +304,7 @@ strongly urge you to share it.
   errors. I'm going to focus on how to use them to your advantage.
 - First, once again, we need to head over to a website. This one is going to be
   a lot easier to work with while using my IDE as I am going make some changes
-  that I want to remain in place after refreshing the page. 
+  that I want to remain in place after refreshing the page.
   - So welcome to the carnage that is my VSCode (for those using GitPod, it's
     almost identical!).
   - I am using Preview on Web Server by Yuichi Nukiyama, there are loads of live
@@ -390,8 +390,8 @@ strongly urge you to share it.
 - Ideally, you want to get that JavaScript bar to 0 'Unused Bytes'. That means
   all of your script is doing something and it is a great screen shot to add to
   your README.
-- Don't forget, you can use coverage, the debugger and your live console all at
-  the same time. This give you a great arsenal of tools to use in your fight
+- Don't forget, you can use coverage, or the debugger, and your live console at
+  the same time. This gives you a great arsenal of tools to use in your fight
   with JavaScript.
 
 ## Question Time

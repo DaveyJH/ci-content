@@ -1,6 +1,6 @@
 # Decipher With DevTools
 
-- [Slideshow](https://docs.google.com/presentation/d/1tjZ0PwkpOg-Bj_5McrvaWFRXVUJ82M5SuNzgEZNsfOc/edit#slide=id.g10aca24b94f_0_114)
+- [Slideshow](./Decipher_with_DevTools.pdf)
 - [errors.html](../../errors.html)
 - Load browser preview VSCode
 - [errors.js](../../assets/js/errors.js)
